@@ -99,3 +99,13 @@ to a very simple conversation files (`parsed_conversations/conv_NNNN.txt`):
   massively or open the file in the browser - good luck with large files,
   you'll love the smooth scrolling - and copy-paste the conversations manually
   out of there - seriously, no one would do that.
+
+### How to use
+
+    pip install beautifulsoup4
+    python main.py messages.htm
+
+and all the conversations will be splitted to the separate folder
+`parsed_conversations` right next to the `main.py` file.
+
+#### Note: Python 2 is not supported
