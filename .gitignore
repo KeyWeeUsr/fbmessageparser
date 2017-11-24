@@ -1,2 +1,6 @@
 *~
 .#*
+*.egg*
+*__pycache__*
+*fbmessageparser/__init__.py
+*#*#*
