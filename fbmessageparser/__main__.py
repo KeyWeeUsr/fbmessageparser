@@ -8,10 +8,17 @@ from bs4 import BeautifulSoup
 # linux \n, windows \r\n
 lineend = '\r\n'
 DIR =  join(dirname(abspath(__file__)), 'parsed_conversations')
-inp = sys.argv[1]
+if len(sys.argv) >= 2 and '--help' not in sys.argv:
+    inp = sys.argv[1]
+else:
+    exit("Use with 'python -m fbmessageparser /path/to/messages.htm'")
 
 # read everything as bytes and decode
-input('Opening {}? Stop with Ctrl + C'.format(inp))
+try:
+    input('Opening {}? Stop with Ctrl + C'.format(inp))
+except EOFError:
+    exit()
+
 os.mkdir(DIR)
 with open(inp, 'rb') as f:
     cont = f.read().decode('utf-8')
